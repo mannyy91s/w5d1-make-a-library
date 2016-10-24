@@ -46,7 +46,14 @@ getHTML(): Get the innerHTML of an element
     var getHTML = function(selector){
         return document.querySelector(selector).innerHTML
     }
+    var ajax = function(url, success){
+        fetch(url)
+        .then(response => response.json())
+        .then(success)
+    }
+    var getProp = function(){
 
+    }
     window.md = {
         one: one,
         all: all,
@@ -58,5 +65,7 @@ getHTML(): Get the innerHTML of an element
         setAttr: setAttr,
         setHTML: setHTML,
         getHTML: getHTML,
+        ajax: ajax,
+        getProp: getProp,
     }
 }())

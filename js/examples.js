@@ -29,3 +29,8 @@ console.log(md.setHTML('.main > h1', 'My dashboard'))
 
 //getHTML
 console.log(md.getHTML('.main > h1'))
+
+//ajax()
+md.ajax('http://swapi.co/api/planets/1/')
+
+//getProp()
