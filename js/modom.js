@@ -24,6 +24,7 @@ getHTML(): Get the innerHTML of an element
     }
     var remove = function(element){
         return document.querySelector(element).remove()
+        // return one(select).remove()  // use one() instead of document.querySelector
     }
     var addClass = function(element, value){
         return document.querySelector(element).classList.add(value)
@@ -51,8 +52,17 @@ getHTML(): Get the innerHTML of an element
         .then(response => response.json())
         .then(success)
     }
-    var getProp = function(){
-
+    var getProp = function(name, property){
+        return document.querySelector(name)[property]
+    }
+    var setProp = function(name, property, string){
+        return document.querySelector(name)[property] = string
+    }
+    var getValue = function(name){
+        return document.querySelector(name).value
+    }
+    var setValue = function(name, setValue){
+        return document.querySelector(name).value = setValue
     }
     window.md = {
         one: one,
@@ -67,5 +77,8 @@ getHTML(): Get the innerHTML of an element
         getHTML: getHTML,
         ajax: ajax,
         getProp: getProp,
+        setProp: setProp,
+        getValue: getValue,
+        setValue: setValue,
     }
 }())
