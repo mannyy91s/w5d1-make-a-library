@@ -41,3 +41,26 @@ example: md.setHTML('.main > h1', 'My dashboard')
 ```javascript
 example: md.getHTML('.main > h1')
 ```
+**ajax()** function that fetches API data. You can log data to check the data coming back from the api
+```javascript
+example: md.ajax('http://swapi.co/api/planets/1/', function(data){
+    data.results
+    console.log(data)
+    })
+```
+**getProp()** function that gets an element's object property value.
+```javascript
+example: md.getProp('#navbar','innerHTML')
+```
+**setProp()** function that sets an element's object property value.
+```javascript
+example: md.setProp('#mocha', 'innerHTML', 'Hello My dashboard')
+```
+**getValue()** function that sets an form field's value attribute.
+```javascript
+example: md.getValue('#navbar')
+```
+**setValue()** function that sets an form field's value attribute.
+```javascript
+example: md.setValue('.navbar-form', 'navibar')
+```

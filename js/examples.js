@@ -1,5 +1,6 @@
 // Your test code examples go here. Make sure you console.log() results.
 
+//Explorer Mode
 //testing one()
 console.log(md.one('#navbar'))
 
@@ -30,6 +31,8 @@ console.log(md.setHTML('.main > h1', 'My dashboard'))
 //getHTML
 console.log(md.getHTML('.main > h1'))
 
+
+//Adventure Mode
 //ajax()
 md.ajax('http://swapi.co/api/planets/1/', function(data){
     data.results

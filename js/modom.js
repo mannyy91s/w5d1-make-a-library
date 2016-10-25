@@ -64,6 +64,9 @@ getHTML(): Get the innerHTML of an element
     var setValue = function(name, setValue){
         return document.querySelector(name).value = setValue
     }
+    var addEvent = function(element, event,callback){
+        return document.querySelector(element).addEventListener(event, callback)
+    }
     window.md = {
         one: one,
         all: all,
@@ -80,5 +83,6 @@ getHTML(): Get the innerHTML of an element
         setProp: setProp,
         getValue: getValue,
         setValue: setValue,
+        addEvent: addEvent,
     }
 }())
